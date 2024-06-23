@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %} Add Category {% endblock title %}
+
+{% block body %}
+<div class="container mt-4">
+    <h1>Add Category</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="txtName" class="form-label">Category Name</label>
+            <input type="text" class="form-control" id="txtName" name="txtName" required>
+        </div>
+        <div class="mb-3">
+            <label for="budPlan" class="form-label">Budget Plan</label>
+            <input type="text" class="form-control" id="budPlan" name="budPlan" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock body %}

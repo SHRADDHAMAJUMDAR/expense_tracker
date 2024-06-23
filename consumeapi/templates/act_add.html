@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %} Add Activity {% endblock title %}
+
+{% block body %}
+<div class="container mt-4">
+    <h1>Add Activity</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="txtActName" class="form-label">Activity Name</label>
+            <input type="text" class="form-control" id="txtActName" name="txtActName" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="acdesc" class="form-label">Activity Description</label>
+            <input type="text" class="form-control" id="acdesc" name="acdesc" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="expense" class="form-label">Expense</label>
+            <input type="text" class="form-control" id="expense" name="expense" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="acdate" class="form-label">Date</label>
+            <input type="date" class="form-control" id="acdate" name="acdate" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock body %}
